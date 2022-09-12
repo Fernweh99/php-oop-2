@@ -5,7 +5,7 @@ class User {
   public $last_name;
   public $card_number;
   public $card_year_expiration;
-  public $id_cart;
+  public $cart;
 
   public function __construct($first_name, $last_name, $card_number, $card_year_expiration, $id_cart) {
     $this->first_name = $this->set_first_name($first_name);
@@ -31,8 +31,8 @@ class User {
     if (is_numeric($card_year_expiration)) return $card_year_expiration;
   }
 
-  public function set_id_cart($id_cart) {
-    if (is_numeric($id_cart)) return $id_cart;
+  public function set_cart($cart) {
+    if (is_numeric($cart)) return $cart;
   }
 }
 
