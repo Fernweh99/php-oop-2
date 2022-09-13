@@ -1,9 +1,8 @@
 <?php
-class PetProduct {
+class Product {
   public $brand;
   public $name;
   public $price;
-  public $in_stock = true;
 
   public function __construct($brand, $name, $price) {
     $this->brand = $this->set_brand($brand);
@@ -20,7 +19,15 @@ class PetProduct {
   }
 
   public function set_price($price) {
-    if (is_numeric($price)) return $price;
+    if (is_float($price)) return $price;
+  }
+
+  public function get_price() {
+    return $this->price;
+  }
+
+  public function get_brand_name() {
+    return $this->brand .' '. $this->name;
   }
 }
 

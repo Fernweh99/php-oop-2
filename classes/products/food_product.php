@@ -5,7 +5,8 @@ class FoodProduct extends Product{
   public $type_pet_food;
   public $food_expiration;
 
-  public function __construct($type_pet_food, $food_expiration) {
+  public function __construct($brand, $name, $price, $type_pet_food, $food_expiration) {
+    parent::__construct($brand, $name, $price);
     $this->type_pet_food = $this->set_type_pet_toy($type_pet_food);
     $this->food_expiration = $this->set_food_expiration($type_pet_food);
   }
