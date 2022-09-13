@@ -35,7 +35,7 @@ class Cart
       $index = $product->get_brand_name();
       foreach($products as $key => $value){
         if($index === $value->get_brand_name()){
-          unset($products[$key]);
+          unset($this->products[$key]);
         }
       }
     }
