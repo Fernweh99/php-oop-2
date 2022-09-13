@@ -18,27 +18,32 @@ class Address
 
   public function set_full_name($full_name) {
     if(is_string($full_name)) {
-      return $this->full_name = $full_name;
+      $this->full_name = $full_name;
+      return $this;
     }
   }
   public function set_country($country) {
     if(is_string($country)) {
-      return $this->country = $country;
+      $this->country = $country;
+      return $this;
     }
   }
   public function set_city($city) {
     if(is_string($city)) {
-      return $this->city = $city;
+      $this->city = $city;
+      return $this;
     }
   }
   public function set_street($street) {
     if(is_string($street)) {
-      return $this->street = $street;
+      $this->street = $street;
+      return $this;
     }
   }
   public function set_zipcode($zipcode) {
     if(is_string($zipcode)) {
-      return $this->zipcode = $zipcode;
+      $this->zipcode = $zipcode;
+      return $this;
     }
   }
 }
